@@ -1,0 +1,269 @@
+{
+  "schema": "moonphys-source-extraction-v1",
+  "source_module": "vectie/moonmoon@0.1.0",
+  "source_head": "38a9791b260516e67814d9e4c2aba52875880d02",
+  "source_path_last_commit": "ba21f3985baeeb02a97bb03f0ad2f086ee27ef24",
+  "captured_on": "2026-10-23",
+  "preexisting_dirty_path_preserved": "ui/rabbita-moon/moon.mod",
+  "files": [
+    {
+      "original": "src/moonphys/review/moon.pkg",
+      "snapshot": "review/moon.pkg.source",
+      "sha256": "0c9c8b5768ee43ba43fead81e79b877ec73f2ab9742f23fc18d5c816775b3272",
+      "bytes": 38,
+      "relocated": "vectie/moonphys/review/moon.pkg"
+    },
+    {
+      "original": "src/moonphys/review/model_metadata.mbt",
+      "snapshot": "review/model_metadata.mbt.source",
+      "sha256": "f288336448560b7313c9d46625fc67dd344a29fda4d7477ad5ee48a20a00bf0d",
+      "bytes": 4037,
+      "relocated": "vectie/moonphys/review/model_metadata.mbt"
+    },
+    {
+      "original": "src/moonphys/review/pkg.generated.mbti",
+      "snapshot": "review/pkg.generated.mbti.source",
+      "sha256": "500016d5275bd985ef60a5b9769c2faae17ba9f428c9f3ff8e19b3e73aeadf7f",
+      "bytes": 1275,
+      "relocated": "vectie/moonphys/review/pkg.generated.mbti"
+    },
+    {
+      "original": "src/moonphys/review/model_metadata_test.mbt",
+      "snapshot": "review/model_metadata_test.mbt.source",
+      "sha256": "9bc95902e8f4d5ae0d973100a4dcbf97fc4d135265bb1b9ac262c7d17caf2cb0",
+      "bytes": 2615,
+      "relocated": "vectie/moonphys/review/model_metadata_test.mbt"
+    },
+    {
+      "original": "src/moonphys/moon.pkg",
+      "snapshot": "moon.pkg.source",
+      "sha256": "6289289b85b4e729ed1044c825637fb85daea4659b6326be46254c0557830092",
+      "bytes": 65,
+      "relocated": "vectie/moonphys/moon.pkg"
+    },
+    {
+      "original": "src/moonphys/util.mbt",
+      "snapshot": "util.mbt.source",
+      "sha256": "638c39887429bd96cd2cc6584df70b2cceae6a6930995492e5109d5f2f2b4113",
+      "bytes": 337,
+      "relocated": "vectie/moonphys/util.mbt"
+    },
+    {
+      "original": "src/moonphys/trace.mbt",
+      "snapshot": "trace.mbt.source",
+      "sha256": "1247c0f2ee1147cce0dbc98b634e8d46e7abd6adf4f86d74d2f1f53d052da1ba",
+      "bytes": 368,
+      "relocated": "vectie/moonphys/trace.mbt"
+    },
+    {
+      "original": "src/moonphys/vector.mbt",
+      "snapshot": "vector.mbt.source",
+      "sha256": "76252ed8fb04019353d49a858931eeace2ca43e627747f8f83dd84ab17ecfa1d",
+      "bytes": 1038,
+      "relocated": "vectie/moonnum/geometry/vector.mbt"
+    },
+    {
+      "original": "src/moonphys/contact.mbt",
+      "snapshot": "contact.mbt.source",
+      "sha256": "2191c0b7c4038140da39337632778ba9aa9c697b0712714149ca360636676535",
+      "bytes": 11337,
+      "relocated": "vectie/moonphys/contact.mbt"
+    },
+    {
+      "original": "src/moonphys/support.mbt",
+      "snapshot": "support.mbt.source",
+      "sha256": "ce9782c9253a7db586b7bb5cb492b034219b8313d0a8ad1d64707ae13687dc6e",
+      "bytes": 20225,
+      "relocated": "vectie/moonphys/support.mbt"
+    },
+    {
+      "original": "src/moonphys/transform.mbt",
+      "snapshot": "transform.mbt.source",
+      "sha256": "c20178ae62a8eb78f3e6c7b7641c1275ff524798695dac38958d09b4df135f66",
+      "bytes": 2791,
+      "relocated": "vectie/moonnum/geometry/transform.mbt"
+    },
+    {
+      "original": "src/moonphys/kinematics.mbt",
+      "snapshot": "kinematics.mbt.source",
+      "sha256": "7ab95c2d32d96f22ee97c69b1500faf2ef8c02e5462f37303a80eefb0621cd9f",
+      "bytes": 814,
+      "relocated": "vectie/moonphys/kinematics.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body.mbt",
+      "snapshot": "rigid_body.mbt.source",
+      "sha256": "1e2c0e55e642122bcf3a89f2763d9aed0c739eef62a9d9e17d237812a6b3aa08",
+      "bytes": 4837,
+      "relocated": "vectie/moonphys/rigid_body.mbt"
+    },
+    {
+      "original": "src/moonphys/environment.mbt",
+      "snapshot": "environment.mbt.source",
+      "sha256": "961ff608ba4f5937f8503ff3fec86da3407318ce6ecb4e7c53d7700d6551d36b",
+      "bytes": 253,
+      "relocated": "vectie/moonphys/environment.mbt"
+    },
+    {
+      "original": "src/moonphys/heightfield.mbt",
+      "snapshot": "heightfield.mbt.source",
+      "sha256": "28da990c8472d25c71bd347f0ad05b785659a334cbcf407d8ba954f415e7ede2",
+      "bytes": 3252,
+      "relocated": "vectie/moonphys/heightfield.mbt"
+    },
+    {
+      "original": "src/moonphys/joint_control.mbt",
+      "snapshot": "joint_control.mbt.source",
+      "sha256": "19483dad85135e846d2ff87963bc0fac8fcc40e5eb53c1e652c0b3f1cf0e7d4c",
+      "bytes": 12144,
+      "relocated": "vectie/moonphys/joint_control.mbt"
+    },
+    {
+      "original": "src/moonphys/moonphys_test.mbt",
+      "snapshot": "moonphys_test.mbt.source",
+      "sha256": "7e0d0137a6675efdde4017951ac8a85796a76d00d4c368c54708c94e83533773",
+      "bytes": 98126,
+      "relocated": "vectie/moonphys/moonphys_test.mbt"
+    },
+    {
+      "original": "src/moonphys/pkg.generated.mbti",
+      "snapshot": "pkg.generated.mbti.source",
+      "sha256": "5ca098025c0acbd425111e0b92409a301c6124c0e8930e778d5ff53ca9ae24d3",
+      "bytes": 49048,
+      "relocated": "vectie/moonphys/pkg.generated.mbti"
+    },
+    {
+      "original": "src/moonphys/collision_shape.mbt",
+      "snapshot": "collision_shape.mbt.source",
+      "sha256": "ca8a89cb0b7d12acf615314f0c15a6c9f0ecd5fbec2b0b8911239e43ba1b224e",
+      "bytes": 3884,
+      "relocated": "vectie/moonphys/collision_shape.mbt"
+    },
+    {
+      "original": "src/moonphys/angular_dynamics.mbt",
+      "snapshot": "angular_dynamics.mbt.source",
+      "sha256": "9bb5bdb09656480d535bb7626ff814024cba4754d2feeadee278f636d8632d6f",
+      "bytes": 8068,
+      "relocated": "vectie/moonphys/angular_dynamics.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_hinge.mbt",
+      "snapshot": "rigid_body_hinge.mbt.source",
+      "sha256": "66d28a8e3cabaac120a227fd3f70be064e6562e1812734a0e49ccb12be14eaa5",
+      "bytes": 9533,
+      "relocated": "vectie/moonphys/rigid_body_hinge.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_trace.mbt",
+      "snapshot": "rigid_body_trace.mbt.source",
+      "sha256": "9870bcd28f776cbb4a001cafdd6ef6a95858c9ca6db31c254e0dbb8a40092f02",
+      "bytes": 2282,
+      "relocated": "vectie/moonphys/rigid_body_trace.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_world.mbt",
+      "snapshot": "rigid_body_world.mbt.source",
+      "sha256": "a2d6a242438295d1bae20e15bced64cb328e32698f54cd0f5d0578be6025bbc6",
+      "bytes": 21457,
+      "relocated": "vectie/moonphys/rigid_body_world.mbt"
+    },
+    {
+      "original": "src/moonphys/collision_contact.mbt",
+      "snapshot": "collision_contact.mbt.source",
+      "sha256": "639b5d6fedaf826dc6638ea2f64d9e637a8cca3fa389710397869de460cb76e8",
+      "bytes": 20156,
+      "relocated": "vectie/moonphys/collision_contact.mbt"
+    },
+    {
+      "original": "src/moonphys/dynamic_stability.mbt",
+      "snapshot": "dynamic_stability.mbt.source",
+      "sha256": "89204004f0b9688d6b57b487b4287e5c3ddf9f70ece34ce88118ac4850c2b502",
+      "bytes": 1605,
+      "relocated": "vectie/moonphys/dynamic_stability.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_wrench.mbt",
+      "snapshot": "rigid_body_wrench.mbt.source",
+      "sha256": "422c9cdabdd25671bb84ca1097ddf456e9b9829dac0e0f8f3d1f693550084c10",
+      "bytes": 3392,
+      "relocated": "vectie/moonphys/rigid_body_wrench.mbt"
+    },
+    {
+      "original": "src/moonphys/motion_frame_review.mbt",
+      "snapshot": "motion_frame_review.mbt.source",
+      "sha256": "b263254d8c575afb2b41ef2d221083f6e641203f88ca64567c37e62d2441ab55",
+      "bytes": 19960,
+      "relocated": "vectie/moonphys/motion_frame_review.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_constraint.mbt",
+      "snapshot": "rigid_body_constraint.mbt.source",
+      "sha256": "f2b6ead2f7f6e5c03f0ff91632163cbbce6251fc54b1daa53983621a50c73858",
+      "bytes": 9735,
+      "relocated": "vectie/moonphys/rigid_body_constraint.mbt"
+    },
+    {
+      "original": "src/moonphys/articulated_kinematics.mbt",
+      "snapshot": "articulated_kinematics.mbt.source",
+      "sha256": "04724562c2c5a8fd30fd0154a3324adc8b26419dd71cd1773c5f3e907e413240",
+      "bytes": 3512,
+      "relocated": "vectie/moonphys/articulated_kinematics.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_joint_frame.mbt",
+      "snapshot": "rigid_body_joint_frame.mbt.source",
+      "sha256": "9e516e10da979dec4fbc2278c9cde5def8acb58b19dc75856184be9a6566a9d2",
+      "bytes": 3479,
+      "relocated": "vectie/moonphys/rigid_body_joint_frame.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_world_hinge.mbt",
+      "snapshot": "rigid_body_world_hinge.mbt.source",
+      "sha256": "93bd3aecc02d729a2efec06b1d37d42c34cae758ff2187cced1133071883c546",
+      "bytes": 23227,
+      "relocated": "vectie/moonphys/rigid_body_world_hinge.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_world_review.mbt",
+      "snapshot": "rigid_body_world_review.mbt.source",
+      "sha256": "4a1dc57db589f79230e90a26272264b76e2cd39cc35cc9d31765b0b8b0d3ce48",
+      "bytes": 8019,
+      "relocated": "vectie/moonphys/rigid_body_world_review.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_world_target.mbt",
+      "snapshot": "rigid_body_world_target.mbt.source",
+      "sha256": "14cdf3dfa630250295c2ac54d8528b993d4218a370ebb50d15cf360f84618623",
+      "bytes": 10232,
+      "relocated": "vectie/moonphys/rigid_body_world_target.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_world_support.mbt",
+      "snapshot": "rigid_body_world_support.mbt.source",
+      "sha256": "da9bd5874ca56fb4e66ec77787302744a0d1a7fc7d67dc734af24614e5cd4000",
+      "bytes": 10503,
+      "relocated": "vectie/moonphys/rigid_body_world_support.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_world_envelope.mbt",
+      "snapshot": "rigid_body_world_envelope.mbt.source",
+      "sha256": "3dcc4fe8831fe842d00cdf3f8fcbe7a9bdb0f9cd12d1124bb15c5c20735f4623",
+      "bytes": 12335,
+      "relocated": "vectie/moonphys/rigid_body_world_envelope.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_world_com_target.mbt",
+      "snapshot": "rigid_body_world_com_target.mbt.source",
+      "sha256": "2359dfd334a4bba7f1ca0a518643cc44662481d1c05775421c9ff8979d36f417",
+      "bytes": 1257,
+      "relocated": "vectie/moonphys/rigid_body_world_com_target.mbt"
+    },
+    {
+      "original": "src/moonphys/rigid_body_world_dynamic_support.mbt",
+      "snapshot": "rigid_body_world_dynamic_support.mbt.source",
+      "sha256": "4a708c6f994f70847ecccf7fb71c6e907a6cf0967b27e717e9259c1de5a5164c",
+      "bytes": 9307,
+      "relocated": "vectie/moonphys/rigid_body_world_dynamic_support.mbt"
+    }
+  ]
+}
