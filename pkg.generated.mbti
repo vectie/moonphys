@@ -285,6 +285,11 @@ pub(all) struct ArticulatedJointPosition {
   joint_id : String
   position_rad : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn ArticulatedJointPosition::equal(Self, Self) -> Bool
+pub fn ArticulatedJointPosition::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn ArticulatedJointPosition::not_equal(Self, Self) -> Bool
+pub fn ArticulatedJointPosition::to_json(Self) -> Json
+pub fn ArticulatedJointPosition::to_repr(Self) -> @debug.Repr
 
 pub(all) struct ArticulatedLinkPose {
   link_id : String
@@ -295,6 +300,11 @@ pub(all) struct ArticulatedLinkPose {
   world_transform : @geometry.Transform3
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn ArticulatedLinkPose::equal(Self, Self) -> Bool
+pub fn ArticulatedLinkPose::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn ArticulatedLinkPose::not_equal(Self, Self) -> Bool
+pub fn ArticulatedLinkPose::to_json(Self) -> Json
+pub fn ArticulatedLinkPose::to_repr(Self) -> @debug.Repr
 
 pub(all) struct ArticulatedLinkSpec {
   link_id : String
@@ -303,6 +313,11 @@ pub(all) struct ArticulatedLinkSpec {
   parent_offset_m : @geometry.Vec3
   joint_axis : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn ArticulatedLinkSpec::equal(Self, Self) -> Bool
+pub fn ArticulatedLinkSpec::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn ArticulatedLinkSpec::not_equal(Self, Self) -> Bool
+pub fn ArticulatedLinkSpec::to_json(Self) -> Json
+pub fn ArticulatedLinkSpec::to_repr(Self) -> @debug.Repr
 
 pub(all) struct ArticulatedPoseTree {
   root_transform : @geometry.Transform3
@@ -311,7 +326,12 @@ pub(all) struct ArticulatedPoseTree {
   links : Array[ArticulatedLinkPose]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn ArticulatedPoseTree::equal(Self, Self) -> Bool
+pub fn ArticulatedPoseTree::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
 pub fn ArticulatedPoseTree::link_transform(Self, String) -> @geometry.Transform3
+pub fn ArticulatedPoseTree::not_equal(Self, Self) -> Bool
+pub fn ArticulatedPoseTree::to_json(Self) -> Json
+pub fn ArticulatedPoseTree::to_repr(Self) -> @debug.Repr
 
 pub(all) struct CapturePointAssessment {
   com_position : @geometry.Vec3
@@ -324,6 +344,11 @@ pub(all) struct CapturePointAssessment {
   stable : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn CapturePointAssessment::equal(Self, Self) -> Bool
+pub fn CapturePointAssessment::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn CapturePointAssessment::not_equal(Self, Self) -> Bool
+pub fn CapturePointAssessment::to_json(Self) -> Json
+pub fn CapturePointAssessment::to_repr(Self) -> @debug.Repr
 
 pub(all) struct CollisionBounds {
   shape_id : String
@@ -334,6 +359,11 @@ pub(all) struct CollisionBounds {
   max : @geometry.Vec3
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn CollisionBounds::equal(Self, Self) -> Bool
+pub fn CollisionBounds::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn CollisionBounds::not_equal(Self, Self) -> Bool
+pub fn CollisionBounds::to_json(Self) -> Json
+pub fn CollisionBounds::to_repr(Self) -> @debug.Repr
 
 pub(all) struct CollisionContact {
   shape_a_id : String
@@ -345,6 +375,11 @@ pub(all) struct CollisionContact {
   in_contact : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn CollisionContact::equal(Self, Self) -> Bool
+pub fn CollisionContact::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn CollisionContact::not_equal(Self, Self) -> Bool
+pub fn CollisionContact::to_json(Self) -> Json
+pub fn CollisionContact::to_repr(Self) -> @debug.Repr
 
 pub(all) struct CollisionContactManifold {
   manifold_id : String
@@ -354,6 +389,11 @@ pub(all) struct CollisionContactManifold {
   average_normal : @geometry.Vec3
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn CollisionContactManifold::equal(Self, Self) -> Bool
+pub fn CollisionContactManifold::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn CollisionContactManifold::not_equal(Self, Self) -> Bool
+pub fn CollisionContactManifold::to_json(Self) -> Json
+pub fn CollisionContactManifold::to_repr(Self) -> @debug.Repr
 
 pub(all) struct CollisionManifoldResolution {
   before : RigidBodyState
@@ -371,6 +411,11 @@ pub(all) struct CollisionManifoldResolution {
   friction_impulse_ns : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn CollisionManifoldResolution::equal(Self, Self) -> Bool
+pub fn CollisionManifoldResolution::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn CollisionManifoldResolution::not_equal(Self, Self) -> Bool
+pub fn CollisionManifoldResolution::to_json(Self) -> Json
+pub fn CollisionManifoldResolution::to_repr(Self) -> @debug.Repr
 
 pub(all) struct CollisionPairProbe {
   shape_a_id : String
@@ -380,6 +425,11 @@ pub(all) struct CollisionPairProbe {
   overlapping : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn CollisionPairProbe::equal(Self, Self) -> Bool
+pub fn CollisionPairProbe::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn CollisionPairProbe::not_equal(Self, Self) -> Bool
+pub fn CollisionPairProbe::to_json(Self) -> Json
+pub fn CollisionPairProbe::to_repr(Self) -> @debug.Repr
 
 pub(all) struct CollisionShape {
   shape_id : String
@@ -388,12 +438,22 @@ pub(all) struct CollisionShape {
   half_height_m : Double
   half_extents_m : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn CollisionShape::equal(Self, Self) -> Bool
+pub fn CollisionShape::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn CollisionShape::not_equal(Self, Self) -> Bool
+pub fn CollisionShape::to_json(Self) -> Json
+pub fn CollisionShape::to_repr(Self) -> @debug.Repr
 
 pub(all) enum CollisionShapeKind {
   SphereShape
   CapsuleShape
   BoxShape
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn CollisionShapeKind::equal(Self, Self) -> Bool
+pub fn CollisionShapeKind::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn CollisionShapeKind::not_equal(Self, Self) -> Bool
+pub fn CollisionShapeKind::to_json(Self) -> Json
+pub fn CollisionShapeKind::to_repr(Self) -> @debug.Repr
 
 pub(all) struct CompositeMassProperties {
   body_id : String
@@ -403,6 +463,11 @@ pub(all) struct CompositeMassProperties {
   inertia_about_center : RigidBodyInertia
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn CompositeMassProperties::equal(Self, Self) -> Bool
+pub fn CompositeMassProperties::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn CompositeMassProperties::not_equal(Self, Self) -> Bool
+pub fn CompositeMassProperties::to_json(Self) -> Json
+pub fn CompositeMassProperties::to_repr(Self) -> @debug.Repr
 
 pub(all) struct ContactPatchLoadAssessment {
   patch_id : String
@@ -418,6 +483,11 @@ pub(all) struct ContactPatchLoadAssessment {
   samples : Array[ContactPatchLoadSample]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn ContactPatchLoadAssessment::equal(Self, Self) -> Bool
+pub fn ContactPatchLoadAssessment::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn ContactPatchLoadAssessment::not_equal(Self, Self) -> Bool
+pub fn ContactPatchLoadAssessment::to_json(Self) -> Json
+pub fn ContactPatchLoadAssessment::to_repr(Self) -> @debug.Repr
 
 pub(all) struct ContactPatchLoadSample {
   probe_id : String
@@ -429,6 +499,11 @@ pub(all) struct ContactPatchLoadSample {
   pressure_pa : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn ContactPatchLoadSample::equal(Self, Self) -> Bool
+pub fn ContactPatchLoadSample::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn ContactPatchLoadSample::not_equal(Self, Self) -> Bool
+pub fn ContactPatchLoadSample::to_json(Self) -> Json
+pub fn ContactPatchLoadSample::to_repr(Self) -> @debug.Repr
 
 pub(all) struct ContactPatchWrenchAssessment {
   patch_id : String
@@ -441,6 +516,11 @@ pub(all) struct ContactPatchWrenchAssessment {
   loaded_sample_count : Int
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn ContactPatchWrenchAssessment::equal(Self, Self) -> Bool
+pub fn ContactPatchWrenchAssessment::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn ContactPatchWrenchAssessment::not_equal(Self, Self) -> Bool
+pub fn ContactPatchWrenchAssessment::to_json(Self) -> Json
+pub fn ContactPatchWrenchAssessment::to_repr(Self) -> @debug.Repr
 
 pub(all) struct ContactProbe {
   probe_id : String
@@ -452,6 +532,11 @@ pub(all) struct ContactProbe {
   local_grade : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn ContactProbe::equal(Self, Self) -> Bool
+pub fn ContactProbe::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn ContactProbe::not_equal(Self, Self) -> Bool
+pub fn ContactProbe::to_json(Self) -> Json
+pub fn ContactProbe::to_repr(Self) -> @debug.Repr
 
 pub(all) struct ContactResolution {
   before : RigidBodyState
@@ -460,6 +545,11 @@ pub(all) struct ContactResolution {
   material : MaterialContactModel
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn ContactResolution::equal(Self, Self) -> Bool
+pub fn ContactResolution::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn ContactResolution::not_equal(Self, Self) -> Bool
+pub fn ContactResolution::to_json(Self) -> Json
+pub fn ContactResolution::to_repr(Self) -> @debug.Repr
 
 pub(all) struct Heightfield {
   field_id : String
@@ -468,6 +558,11 @@ pub(all) struct Heightfield {
   cell_size_m : Double
   elevations_m : Array[Double]
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn Heightfield::equal(Self, Self) -> Bool
+pub fn Heightfield::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn Heightfield::not_equal(Self, Self) -> Bool
+pub fn Heightfield::to_json(Self) -> Json
+pub fn Heightfield::to_repr(Self) -> @debug.Repr
 
 pub(all) struct HeightfieldCollision {
   body_id : String
@@ -481,6 +576,11 @@ pub(all) struct HeightfieldCollision {
   in_contact : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn HeightfieldCollision::equal(Self, Self) -> Bool
+pub fn HeightfieldCollision::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn HeightfieldCollision::not_equal(Self, Self) -> Bool
+pub fn HeightfieldCollision::to_json(Self) -> Json
+pub fn HeightfieldCollision::to_repr(Self) -> @debug.Repr
 
 pub(all) struct HeightfieldContactPatch {
   patch_id : String
@@ -496,6 +596,11 @@ pub(all) struct HeightfieldContactPatch {
   samples : Array[ContactProbe]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn HeightfieldContactPatch::equal(Self, Self) -> Bool
+pub fn HeightfieldContactPatch::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn HeightfieldContactPatch::not_equal(Self, Self) -> Bool
+pub fn HeightfieldContactPatch::to_json(Self) -> Json
+pub fn HeightfieldContactPatch::to_repr(Self) -> @debug.Repr
 
 pub(all) struct HeightfieldSample {
   field_id : String
@@ -508,6 +613,11 @@ pub(all) struct HeightfieldSample {
   local_grade_y : Double
   surface_normal : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn HeightfieldSample::equal(Self, Self) -> Bool
+pub fn HeightfieldSample::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn HeightfieldSample::not_equal(Self, Self) -> Bool
+pub fn HeightfieldSample::to_json(Self) -> Json
+pub fn HeightfieldSample::to_repr(Self) -> @debug.Repr
 
 pub(all) struct JointLimit {
   joint_id : String
@@ -516,6 +626,11 @@ pub(all) struct JointLimit {
   max_velocity_rad_s : Double
   max_torque_nm : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn JointLimit::equal(Self, Self) -> Bool
+pub fn JointLimit::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn JointLimit::not_equal(Self, Self) -> Bool
+pub fn JointLimit::to_json(Self) -> Json
+pub fn JointLimit::to_repr(Self) -> @debug.Repr
 
 pub(all) struct JointMotorCommand {
   joint_id : String
@@ -523,6 +638,11 @@ pub(all) struct JointMotorCommand {
   target_velocity_rad_s : Double
   feedforward_torque_nm : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn JointMotorCommand::equal(Self, Self) -> Bool
+pub fn JointMotorCommand::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn JointMotorCommand::not_equal(Self, Self) -> Bool
+pub fn JointMotorCommand::to_json(Self) -> Json
+pub fn JointMotorCommand::to_repr(Self) -> @debug.Repr
 
 pub(all) struct JointMotorFrame {
   frame_id : String
@@ -539,6 +659,11 @@ pub(all) struct JointMotorFrame {
   steps : Array[JointMotorFrameStep]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn JointMotorFrame::equal(Self, Self) -> Bool
+pub fn JointMotorFrame::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn JointMotorFrame::not_equal(Self, Self) -> Bool
+pub fn JointMotorFrame::to_json(Self) -> Json
+pub fn JointMotorFrame::to_repr(Self) -> @debug.Repr
 
 pub(all) struct JointMotorFrameStep {
   command : JointMotorCommand
@@ -547,12 +672,22 @@ pub(all) struct JointMotorFrameStep {
   velocity_within_limits : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn JointMotorFrameStep::equal(Self, Self) -> Bool
+pub fn JointMotorFrameStep::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn JointMotorFrameStep::not_equal(Self, Self) -> Bool
+pub fn JointMotorFrameStep::to_json(Self) -> Json
+pub fn JointMotorFrameStep::to_repr(Self) -> @debug.Repr
 
 pub(all) struct JointMotorState {
   joint_id : String
   position_rad : Double
   velocity_rad_s : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn JointMotorState::equal(Self, Self) -> Bool
+pub fn JointMotorState::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn JointMotorState::not_equal(Self, Self) -> Bool
+pub fn JointMotorState::to_json(Self) -> Json
+pub fn JointMotorState::to_repr(Self) -> @debug.Repr
 
 pub(all) struct JointMotorStep {
   before : JointMotorState
@@ -566,12 +701,22 @@ pub(all) struct JointMotorStep {
   absolute_work_j : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn JointMotorStep::equal(Self, Self) -> Bool
+pub fn JointMotorStep::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn JointMotorStep::not_equal(Self, Self) -> Bool
+pub fn JointMotorStep::to_json(Self) -> Json
+pub fn JointMotorStep::to_repr(Self) -> @debug.Repr
 
 pub(all) struct JointServoConfig {
   joint_id : String
   stiffness_nm_per_rad : Double
   damping_nm_s_per_rad : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn JointServoConfig::equal(Self, Self) -> Bool
+pub fn JointServoConfig::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn JointServoConfig::not_equal(Self, Self) -> Bool
+pub fn JointServoConfig::to_json(Self) -> Json
+pub fn JointServoConfig::to_repr(Self) -> @debug.Repr
 
 pub(all) struct JointServoOutput {
   joint_id : String
@@ -581,6 +726,11 @@ pub(all) struct JointServoOutput {
   saturated : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn JointServoOutput::equal(Self, Self) -> Bool
+pub fn JointServoOutput::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn JointServoOutput::not_equal(Self, Self) -> Bool
+pub fn JointServoOutput::to_json(Self) -> Json
+pub fn JointServoOutput::to_repr(Self) -> @debug.Repr
 
 pub(all) struct JointVelocityLimitedCommand {
   command : JointMotorCommand
@@ -592,17 +742,32 @@ pub(all) struct JointVelocityLimitedCommand {
   position_limited : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn JointVelocityLimitedCommand::equal(Self, Self) -> Bool
+pub fn JointVelocityLimitedCommand::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn JointVelocityLimitedCommand::not_equal(Self, Self) -> Bool
+pub fn JointVelocityLimitedCommand::to_json(Self) -> Json
+pub fn JointVelocityLimitedCommand::to_repr(Self) -> @debug.Repr
 
 pub(all) struct KinematicBodyState {
   body_id : String
   position : @geometry.Vec3
   velocity : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn KinematicBodyState::equal(Self, Self) -> Bool
+pub fn KinematicBodyState::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn KinematicBodyState::not_equal(Self, Self) -> Bool
+pub fn KinematicBodyState::to_json(Self) -> Json
+pub fn KinematicBodyState::to_repr(Self) -> @debug.Repr
 
 pub(all) struct KinematicStep {
   dt_s : Double
   acceleration : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn KinematicStep::equal(Self, Self) -> Bool
+pub fn KinematicStep::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn KinematicStep::not_equal(Self, Self) -> Bool
+pub fn KinematicStep::to_json(Self) -> Json
+pub fn KinematicStep::to_repr(Self) -> @debug.Repr
 
 pub(all) struct MassPropertyElement {
   element_id : String
@@ -610,12 +775,22 @@ pub(all) struct MassPropertyElement {
   center_of_mass : @geometry.Vec3
   inertia_about_center : RigidBodyInertia
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn MassPropertyElement::equal(Self, Self) -> Bool
+pub fn MassPropertyElement::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn MassPropertyElement::not_equal(Self, Self) -> Bool
+pub fn MassPropertyElement::to_json(Self) -> Json
+pub fn MassPropertyElement::to_repr(Self) -> @debug.Repr
 
 pub(all) struct MaterialContactModel {
   material_id : String
   friction_coefficient : Double
   restitution_coefficient : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn MaterialContactModel::equal(Self, Self) -> Bool
+pub fn MaterialContactModel::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn MaterialContactModel::not_equal(Self, Self) -> Bool
+pub fn MaterialContactModel::to_json(Self) -> Json
+pub fn MaterialContactModel::to_repr(Self) -> @debug.Repr
 
 pub(all) struct MotionContactEvidence {
   contact_id : String
@@ -623,6 +798,11 @@ pub(all) struct MotionContactEvidence {
   patch : HeightfieldContactPatch
   applied_force_n : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn MotionContactEvidence::equal(Self, Self) -> Bool
+pub fn MotionContactEvidence::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn MotionContactEvidence::not_equal(Self, Self) -> Bool
+pub fn MotionContactEvidence::to_json(Self) -> Json
+pub fn MotionContactEvidence::to_repr(Self) -> @debug.Repr
 
 pub(all) struct MotionContactReview {
   contact_id : String
@@ -642,6 +822,11 @@ pub(all) struct MotionContactReview {
   ready : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn MotionContactReview::equal(Self, Self) -> Bool
+pub fn MotionContactReview::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn MotionContactReview::not_equal(Self, Self) -> Bool
+pub fn MotionContactReview::to_json(Self) -> Json
+pub fn MotionContactReview::to_repr(Self) -> @debug.Repr
 
 pub(all) struct MotionFrameReview {
   review_id : String
@@ -671,6 +856,11 @@ pub(all) struct MotionFrameReview {
   ready : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn MotionFrameReview::equal(Self, Self) -> Bool
+pub fn MotionFrameReview::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn MotionFrameReview::not_equal(Self, Self) -> Bool
+pub fn MotionFrameReview::to_json(Self) -> Json
+pub fn MotionFrameReview::to_repr(Self) -> @debug.Repr
 
 pub(all) struct MotionFrameTraceReview {
   trace_id : String
@@ -702,6 +892,11 @@ pub(all) struct MotionFrameTraceReview {
   ready : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn MotionFrameTraceReview::equal(Self, Self) -> Bool
+pub fn MotionFrameTraceReview::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn MotionFrameTraceReview::not_equal(Self, Self) -> Bool
+pub fn MotionFrameTraceReview::to_json(Self) -> Json
+pub fn MotionFrameTraceReview::to_repr(Self) -> @debug.Repr
 
 pub(all) struct MotionHingeReplayReview {
   review_id : String
@@ -734,11 +929,21 @@ pub(all) struct MotionHingeReplayReview {
   ready : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn MotionHingeReplayReview::equal(Self, Self) -> Bool
+pub fn MotionHingeReplayReview::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn MotionHingeReplayReview::not_equal(Self, Self) -> Bool
+pub fn MotionHingeReplayReview::to_json(Self) -> Json
+pub fn MotionHingeReplayReview::to_repr(Self) -> @debug.Repr
 
 pub(all) struct PhysicsEnvironment {
   environment_id : String
   gravity_mps2 : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn PhysicsEnvironment::equal(Self, Self) -> Bool
+pub fn PhysicsEnvironment::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn PhysicsEnvironment::not_equal(Self, Self) -> Bool
+pub fn PhysicsEnvironment::to_json(Self) -> Json
+pub fn PhysicsEnvironment::to_repr(Self) -> @debug.Repr
 
 pub(all) struct PhysicsFrame {
   frame_index : Int
@@ -747,6 +952,11 @@ pub(all) struct PhysicsFrame {
   contacts : Array[ContactProbe]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn PhysicsFrame::equal(Self, Self) -> Bool
+pub fn PhysicsFrame::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn PhysicsFrame::not_equal(Self, Self) -> Bool
+pub fn PhysicsFrame::to_json(Self) -> Json
+pub fn PhysicsFrame::to_repr(Self) -> @debug.Repr
 
 pub(all) struct PhysicsTrace {
   trace_id : String
@@ -754,17 +964,32 @@ pub(all) struct PhysicsTrace {
   frames : Array[PhysicsFrame]
   note : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn PhysicsTrace::equal(Self, Self) -> Bool
+pub fn PhysicsTrace::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn PhysicsTrace::not_equal(Self, Self) -> Bool
+pub fn PhysicsTrace::to_json(Self) -> Json
+pub fn PhysicsTrace::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyAngularState {
   body_id : String
   orientation : @geometry.Basis3
   angular_velocity_rad_s : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyAngularState::equal(Self, Self) -> Bool
+pub fn RigidBodyAngularState::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyAngularState::not_equal(Self, Self) -> Bool
+pub fn RigidBodyAngularState::to_json(Self) -> Json
+pub fn RigidBodyAngularState::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyAngularStep {
   dt_s : Double
   torque_nm : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyAngularStep::equal(Self, Self) -> Bool
+pub fn RigidBodyAngularStep::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyAngularStep::not_equal(Self, Self) -> Bool
+pub fn RigidBodyAngularStep::to_json(Self) -> Json
+pub fn RigidBodyAngularStep::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHeightfieldFrame {
   frame_index : Int
@@ -775,6 +1000,11 @@ pub(all) struct RigidBodyHeightfieldFrame {
   after : RigidBodyState
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHeightfieldFrame::equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldFrame::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHeightfieldFrame::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldFrame::to_json(Self) -> Json
+pub fn RigidBodyHeightfieldFrame::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHeightfieldTrace {
   trace_id : String
@@ -788,6 +1018,11 @@ pub(all) struct RigidBodyHeightfieldTrace {
   status : String
   note : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHeightfieldTrace::equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldTrace::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHeightfieldTrace::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldTrace::to_json(Self) -> Json
+pub fn RigidBodyHeightfieldTrace::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHeightfieldWorld {
   world_id : String
@@ -799,6 +1034,11 @@ pub(all) struct RigidBodyHeightfieldWorld {
   motion_bodies : Array[RigidBodyJointFrameBody]
   hinge_constraints : Array[RigidBodyHingeJointConstraint]
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHeightfieldWorld::equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldWorld::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHeightfieldWorld::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldWorld::to_json(Self) -> Json
+pub fn RigidBodyHeightfieldWorld::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHeightfieldWorldHingeMotorStep {
   frame_index : Int
@@ -815,6 +1055,11 @@ pub(all) struct RigidBodyHeightfieldWorldHingeMotorStep {
   review_count : Int
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHeightfieldWorldHingeMotorStep::equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldWorldHingeMotorStep::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHeightfieldWorldHingeMotorStep::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldWorldHingeMotorStep::to_json(Self) -> Json
+pub fn RigidBodyHeightfieldWorldHingeMotorStep::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHeightfieldWorldHingeMotorTrace {
   trace_id : String
@@ -831,6 +1076,11 @@ pub(all) struct RigidBodyHeightfieldWorldHingeMotorTrace {
   status : String
   note : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHeightfieldWorldHingeMotorTrace::equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldWorldHingeMotorTrace::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHeightfieldWorldHingeMotorTrace::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldWorldHingeMotorTrace::to_json(Self) -> Json
+pub fn RigidBodyHeightfieldWorldHingeMotorTrace::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHeightfieldWorldStep {
   frame_index : Int
@@ -858,6 +1108,11 @@ pub(all) struct RigidBodyHeightfieldWorldStep {
   kinetic_energy_delta_j : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHeightfieldWorldStep::equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldWorldStep::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHeightfieldWorldStep::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldWorldStep::to_json(Self) -> Json
+pub fn RigidBodyHeightfieldWorldStep::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHeightfieldWorldTrace {
   trace_id : String
@@ -870,6 +1125,11 @@ pub(all) struct RigidBodyHeightfieldWorldTrace {
   status : String
   note : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHeightfieldWorldTrace::equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldWorldTrace::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHeightfieldWorldTrace::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHeightfieldWorldTrace::to_json(Self) -> Json
+pub fn RigidBodyHeightfieldWorldTrace::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHingeAxisAssessment {
   constraint_id : String
@@ -886,6 +1146,11 @@ pub(all) struct RigidBodyHingeAxisAssessment {
   correction_angle_rad : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHingeAxisAssessment::equal(Self, Self) -> Bool
+pub fn RigidBodyHingeAxisAssessment::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHingeAxisAssessment::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHingeAxisAssessment::to_json(Self) -> Json
+pub fn RigidBodyHingeAxisAssessment::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHingeAxisConstraint {
   constraint_id : String
@@ -895,6 +1160,11 @@ pub(all) struct RigidBodyHingeAxisConstraint {
   local_axis_b : @geometry.Vec3
   stiffness : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHingeAxisConstraint::equal(Self, Self) -> Bool
+pub fn RigidBodyHingeAxisConstraint::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHingeAxisConstraint::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHingeAxisConstraint::to_json(Self) -> Json
+pub fn RigidBodyHingeAxisConstraint::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHingeAxisCorrection {
   assessment : RigidBodyHingeAxisAssessment
@@ -909,6 +1179,11 @@ pub(all) struct RigidBodyHingeAxisCorrection {
   angular_impulse_nms : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHingeAxisCorrection::equal(Self, Self) -> Bool
+pub fn RigidBodyHingeAxisCorrection::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHingeAxisCorrection::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHingeAxisCorrection::to_json(Self) -> Json
+pub fn RigidBodyHingeAxisCorrection::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHingeJointAssessment {
   joint_id : String
@@ -920,12 +1195,22 @@ pub(all) struct RigidBodyHingeJointAssessment {
   angular_impulse_nms : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHingeJointAssessment::equal(Self, Self) -> Bool
+pub fn RigidBodyHingeJointAssessment::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHingeJointAssessment::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHingeJointAssessment::to_json(Self) -> Json
+pub fn RigidBodyHingeJointAssessment::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHingeJointConstraint {
   joint_id : String
   position : RigidBodyWorldDistanceConstraint
   axis : RigidBodyHingeAxisConstraint
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHingeJointConstraint::equal(Self, Self) -> Bool
+pub fn RigidBodyHingeJointConstraint::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHingeJointConstraint::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHingeJointConstraint::to_json(Self) -> Json
+pub fn RigidBodyHingeJointConstraint::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyHingeJointFrameAssessment {
   frame_id : String
@@ -940,23 +1225,43 @@ pub(all) struct RigidBodyHingeJointFrameAssessment {
   joints : Array[RigidBodyHingeJointAssessment]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyHingeJointFrameAssessment::equal(Self, Self) -> Bool
+pub fn RigidBodyHingeJointFrameAssessment::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyHingeJointFrameAssessment::not_equal(Self, Self) -> Bool
+pub fn RigidBodyHingeJointFrameAssessment::to_json(Self) -> Json
+pub fn RigidBodyHingeJointFrameAssessment::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyInertia {
   body_id : String
   diagonal_kg_m2 : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyInertia::equal(Self, Self) -> Bool
+pub fn RigidBodyInertia::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyInertia::not_equal(Self, Self) -> Bool
+pub fn RigidBodyInertia::to_json(Self) -> Json
+pub fn RigidBodyInertia::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyJointFrameBody {
   body_id : String
   state : RigidBodyMotionState
   inertia : RigidBodyInertia
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyJointFrameBody::equal(Self, Self) -> Bool
+pub fn RigidBodyJointFrameBody::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyJointFrameBody::not_equal(Self, Self) -> Bool
+pub fn RigidBodyJointFrameBody::to_json(Self) -> Json
+pub fn RigidBodyJointFrameBody::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyMotionState {
   body_id : String
   linear : RigidBodyState
   angular : RigidBodyAngularState
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyMotionState::equal(Self, Self) -> Bool
+pub fn RigidBodyMotionState::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyMotionState::not_equal(Self, Self) -> Bool
+pub fn RigidBodyMotionState::to_json(Self) -> Json
+pub fn RigidBodyMotionState::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyState {
   body_id : String
@@ -965,12 +1270,22 @@ pub(all) struct RigidBodyState {
   position : @geometry.Vec3
   velocity : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyState::equal(Self, Self) -> Bool
+pub fn RigidBodyState::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyState::not_equal(Self, Self) -> Bool
+pub fn RigidBodyState::to_json(Self) -> Json
+pub fn RigidBodyState::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldBody {
   state : RigidBodyState
   collision_shape : CollisionShape
   external_force_n : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldBody::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBody::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldBody::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBody::to_json(Self) -> Json
+pub fn RigidBodyWorldBody::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldBodyEnvelope {
   body_id : String
@@ -982,6 +1297,11 @@ pub(all) struct RigidBodyWorldBodyEnvelope {
   max_linear_momentum_kg_mps : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldBodyEnvelope::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBodyEnvelope::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldBodyEnvelope::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBodyEnvelope::to_json(Self) -> Json
+pub fn RigidBodyWorldBodyEnvelope::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldBodyFrame {
   body_id : String
@@ -996,6 +1316,11 @@ pub(all) struct RigidBodyWorldBodyFrame {
   kinetic_energy_delta_j : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldBodyFrame::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBodyFrame::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldBodyFrame::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBodyFrame::to_json(Self) -> Json
+pub fn RigidBodyWorldBodyFrame::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldBodyTarget {
   body_id : String
@@ -1003,6 +1328,11 @@ pub(all) struct RigidBodyWorldBodyTarget {
   target_velocity : @geometry.Vec3
   max_correction_m : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldBodyTarget::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBodyTarget::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldBodyTarget::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBodyTarget::to_json(Self) -> Json
+pub fn RigidBodyWorldBodyTarget::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldBodyTargetFrame {
   world_id : String
@@ -1015,6 +1345,11 @@ pub(all) struct RigidBodyWorldBodyTargetFrame {
   after : RigidBodyHeightfieldWorld
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldBodyTargetFrame::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBodyTargetFrame::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldBodyTargetFrame::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBodyTargetFrame::to_json(Self) -> Json
+pub fn RigidBodyWorldBodyTargetFrame::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldBodyTargetStep {
   body_id : String
@@ -1028,6 +1363,11 @@ pub(all) struct RigidBodyWorldBodyTargetStep {
   within_limit : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldBodyTargetStep::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBodyTargetStep::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldBodyTargetStep::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldBodyTargetStep::to_json(Self) -> Json
+pub fn RigidBodyWorldBodyTargetStep::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldCenterOfMassTarget {
   center_of_mass : @geometry.Vec3
@@ -1035,6 +1375,11 @@ pub(all) struct RigidBodyWorldCenterOfMassTarget {
   total_mass_kg : Double
   nominal_com_height_m : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldCenterOfMassTarget::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldCenterOfMassTarget::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldCenterOfMassTarget::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldCenterOfMassTarget::to_json(Self) -> Json
+pub fn RigidBodyWorldCenterOfMassTarget::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldConstraintFrame {
   world_id : String
@@ -1047,6 +1392,11 @@ pub(all) struct RigidBodyWorldConstraintFrame {
   after : RigidBodyHeightfieldWorld
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldConstraintFrame::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldConstraintFrame::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldConstraintFrame::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldConstraintFrame::to_json(Self) -> Json
+pub fn RigidBodyWorldConstraintFrame::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldConstraintResolution {
   constraint_id : String
@@ -1070,6 +1420,11 @@ pub(all) struct RigidBodyWorldConstraintResolution {
   impulse_ns : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldConstraintResolution::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldConstraintResolution::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldConstraintResolution::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldConstraintResolution::to_json(Self) -> Json
+pub fn RigidBodyWorldConstraintResolution::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldContactResolution {
   world_id : String
@@ -1082,6 +1437,11 @@ pub(all) struct RigidBodyWorldContactResolution {
   after : RigidBodyHeightfieldWorld
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldContactResolution::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldContactResolution::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldContactResolution::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldContactResolution::to_json(Self) -> Json
+pub fn RigidBodyWorldContactResolution::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldContactSchedule {
   world_id : String
@@ -1092,6 +1452,11 @@ pub(all) struct RigidBodyWorldContactSchedule {
   manifold : CollisionContactManifold
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldContactSchedule::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldContactSchedule::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldContactSchedule::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldContactSchedule::to_json(Self) -> Json
+pub fn RigidBodyWorldContactSchedule::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldDistanceConstraint {
   constraint_id : String
@@ -1102,6 +1467,11 @@ pub(all) struct RigidBodyWorldDistanceConstraint {
   rest_length_m : Double
   stiffness : Double
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldDistanceConstraint::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldDistanceConstraint::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldDistanceConstraint::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldDistanceConstraint::to_json(Self) -> Json
+pub fn RigidBodyWorldDistanceConstraint::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldDynamicSupportFrame {
   frame_index : Int
@@ -1114,6 +1484,11 @@ pub(all) struct RigidBodyWorldDynamicSupportFrame {
   capture_support_recovery : SupportRecoveryCorrection
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldDynamicSupportFrame::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldDynamicSupportFrame::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldDynamicSupportFrame::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldDynamicSupportFrame::to_json(Self) -> Json
+pub fn RigidBodyWorldDynamicSupportFrame::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldDynamicSupportTrace {
   trace_id : String
@@ -1127,6 +1502,11 @@ pub(all) struct RigidBodyWorldDynamicSupportTrace {
   frames : Array[RigidBodyWorldDynamicSupportFrame]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldDynamicSupportTrace::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldDynamicSupportTrace::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldDynamicSupportTrace::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldDynamicSupportTrace::to_json(Self) -> Json
+pub fn RigidBodyWorldDynamicSupportTrace::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldHingeConstraintFrame {
   world_id : String
@@ -1142,6 +1522,11 @@ pub(all) struct RigidBodyWorldHingeConstraintFrame {
   after : RigidBodyHeightfieldWorld
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldHingeConstraintFrame::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldHingeConstraintFrame::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldHingeConstraintFrame::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldHingeConstraintFrame::to_json(Self) -> Json
+pub fn RigidBodyWorldHingeConstraintFrame::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldHingeJointResolution {
   joint_id : String
@@ -1156,6 +1541,11 @@ pub(all) struct RigidBodyWorldHingeJointResolution {
   velocity_delta_b_rad_s : @geometry.Vec3
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldHingeJointResolution::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldHingeJointResolution::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldHingeJointResolution::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldHingeJointResolution::to_json(Self) -> Json
+pub fn RigidBodyWorldHingeJointResolution::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldHingeMotorFrame {
   world_id : String
@@ -1171,6 +1561,11 @@ pub(all) struct RigidBodyWorldHingeMotorFrame {
   after : RigidBodyHeightfieldWorld
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldHingeMotorFrame::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldHingeMotorFrame::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldHingeMotorFrame::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldHingeMotorFrame::to_json(Self) -> Json
+pub fn RigidBodyWorldHingeMotorFrame::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldHingeMotorStep {
   joint_id : String
@@ -1184,6 +1579,11 @@ pub(all) struct RigidBodyWorldHingeMotorStep {
   after_b : RigidBodyMotionState
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldHingeMotorStep::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldHingeMotorStep::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldHingeMotorStep::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldHingeMotorStep::to_json(Self) -> Json
+pub fn RigidBodyWorldHingeMotorStep::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldHingeMotorTrace {
   trace_id : String
@@ -1198,6 +1598,11 @@ pub(all) struct RigidBodyWorldHingeMotorTrace {
   status : String
   note : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldHingeMotorTrace::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldHingeMotorTrace::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldHingeMotorTrace::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldHingeMotorTrace::to_json(Self) -> Json
+pub fn RigidBodyWorldHingeMotorTrace::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldPairContact {
   body_a_id : String
@@ -1206,6 +1611,11 @@ pub(all) struct RigidBodyWorldPairContact {
   contact : CollisionContact
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldPairContact::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldPairContact::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldPairContact::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldPairContact::to_json(Self) -> Json
+pub fn RigidBodyWorldPairContact::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldPairResolution {
   body_a_id : String
@@ -1223,6 +1633,11 @@ pub(all) struct RigidBodyWorldPairResolution {
   friction_impulse_ns : Double
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldPairResolution::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldPairResolution::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldPairResolution::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldPairResolution::to_json(Self) -> Json
+pub fn RigidBodyWorldPairResolution::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldReplayReview {
   trace_id : String
@@ -1263,6 +1678,11 @@ pub(all) struct RigidBodyWorldReplayReview {
   blockers : Array[String]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldReplayReview::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldReplayReview::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldReplayReview::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldReplayReview::to_json(Self) -> Json
+pub fn RigidBodyWorldReplayReview::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldSupportFrame {
   frame_index : Int
@@ -1277,6 +1697,11 @@ pub(all) struct RigidBodyWorldSupportFrame {
   load : SupportLoadAssessment
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldSupportFrame::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldSupportFrame::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldSupportFrame::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldSupportFrame::to_json(Self) -> Json
+pub fn RigidBodyWorldSupportFrame::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldSupportTrace {
   trace_id : String
@@ -1292,6 +1717,11 @@ pub(all) struct RigidBodyWorldSupportTrace {
   frames : Array[RigidBodyWorldSupportFrame]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldSupportTrace::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldSupportTrace::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldSupportTrace::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldSupportTrace::to_json(Self) -> Json
+pub fn RigidBodyWorldSupportTrace::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWorldTraceEnvelope {
   trace_id : String
@@ -1317,11 +1747,21 @@ pub(all) struct RigidBodyWorldTraceEnvelope {
   body_envelopes : Array[RigidBodyWorldBodyEnvelope]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWorldTraceEnvelope::equal(Self, Self) -> Bool
+pub fn RigidBodyWorldTraceEnvelope::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWorldTraceEnvelope::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWorldTraceEnvelope::to_json(Self) -> Json
+pub fn RigidBodyWorldTraceEnvelope::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWrench {
   force_n : @geometry.Vec3
   torque_nm : @geometry.Vec3
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWrench::equal(Self, Self) -> Bool
+pub fn RigidBodyWrench::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWrench::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWrench::to_json(Self) -> Json
+pub fn RigidBodyWrench::to_repr(Self) -> @debug.Repr
 
 pub(all) struct RigidBodyWrenchStep {
   before : RigidBodyMotionState
@@ -1337,6 +1777,11 @@ pub(all) struct RigidBodyWrenchStep {
   after : RigidBodyMotionState
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn RigidBodyWrenchStep::equal(Self, Self) -> Bool
+pub fn RigidBodyWrenchStep::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn RigidBodyWrenchStep::not_equal(Self, Self) -> Bool
+pub fn RigidBodyWrenchStep::to_json(Self) -> Json
+pub fn RigidBodyWrenchStep::to_repr(Self) -> @debug.Repr
 
 pub(all) struct SupportAssessment {
   support_count : Int
@@ -1353,6 +1798,11 @@ pub(all) struct SupportAssessment {
   stable : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn SupportAssessment::equal(Self, Self) -> Bool
+pub fn SupportAssessment::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn SupportAssessment::not_equal(Self, Self) -> Bool
+pub fn SupportAssessment::to_json(Self) -> Json
+pub fn SupportAssessment::to_repr(Self) -> @debug.Repr
 
 pub(all) struct SupportFootprint {
   footprint_id : String
@@ -1361,6 +1811,11 @@ pub(all) struct SupportFootprint {
   half_width_m : Double
   active : Bool
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn SupportFootprint::equal(Self, Self) -> Bool
+pub fn SupportFootprint::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn SupportFootprint::not_equal(Self, Self) -> Bool
+pub fn SupportFootprint::to_json(Self) -> Json
+pub fn SupportFootprint::to_repr(Self) -> @debug.Repr
 
 pub(all) struct SupportLoad {
   footprint_id : String
@@ -1370,6 +1825,11 @@ pub(all) struct SupportLoad {
   contact_torque_nm : @geometry.Vec3
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn SupportLoad::equal(Self, Self) -> Bool
+pub fn SupportLoad::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn SupportLoad::not_equal(Self, Self) -> Bool
+pub fn SupportLoad::to_json(Self) -> Json
+pub fn SupportLoad::to_repr(Self) -> @debug.Repr
 
 pub(all) struct SupportLoadAssessment {
   load_count : Int
@@ -1383,6 +1843,11 @@ pub(all) struct SupportLoadAssessment {
   balanced : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn SupportLoadAssessment::equal(Self, Self) -> Bool
+pub fn SupportLoadAssessment::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn SupportLoadAssessment::not_equal(Self, Self) -> Bool
+pub fn SupportLoadAssessment::to_json(Self) -> Json
+pub fn SupportLoadAssessment::to_repr(Self) -> @debug.Repr
 
 pub(all) struct SupportRecoveryCorrection {
   support_count : Int
@@ -1395,6 +1860,11 @@ pub(all) struct SupportRecoveryCorrection {
   recoverable : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn SupportRecoveryCorrection::equal(Self, Self) -> Bool
+pub fn SupportRecoveryCorrection::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn SupportRecoveryCorrection::not_equal(Self, Self) -> Bool
+pub fn SupportRecoveryCorrection::to_json(Self) -> Json
+pub fn SupportRecoveryCorrection::to_repr(Self) -> @debug.Repr
 
 pub(all) struct TractionAssessment {
   contact_id : String
@@ -1407,6 +1877,11 @@ pub(all) struct TractionAssessment {
   slipping : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn TractionAssessment::equal(Self, Self) -> Bool
+pub fn TractionAssessment::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn TractionAssessment::not_equal(Self, Self) -> Bool
+pub fn TractionAssessment::to_json(Self) -> Json
+pub fn TractionAssessment::to_repr(Self) -> @debug.Repr
 
 // Type aliases
 pub using @geometry {type Basis3}

@@ -26,6 +26,11 @@ pub(all) struct ModelMetadataInventory {
   ready : Bool
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn ModelMetadataInventory::equal(Self, Self) -> Bool
+pub fn ModelMetadataInventory::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn ModelMetadataInventory::not_equal(Self, Self) -> Bool
+pub fn ModelMetadataInventory::to_json(Self) -> Json
+pub fn ModelMetadataInventory::to_repr(Self) -> @debug.Repr
 
 pub(all) struct PhysicalModelReadiness {
   readiness_id : String
@@ -42,6 +47,11 @@ pub(all) struct PhysicalModelReadiness {
   missing_items : Array[String]
   status : String
 } derive(Eq, ToJson, @debug.Debug, @json.FromJson)
+pub fn PhysicalModelReadiness::equal(Self, Self) -> Bool
+pub fn PhysicalModelReadiness::from_json(Json, @json.JsonPath) -> Self raise @json.JsonDecodeError
+pub fn PhysicalModelReadiness::not_equal(Self, Self) -> Bool
+pub fn PhysicalModelReadiness::to_json(Self) -> Json
+pub fn PhysicalModelReadiness::to_repr(Self) -> @debug.Repr
 
 // Type aliases
 

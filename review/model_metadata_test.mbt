@@ -1,6 +1,6 @@
 ///|
 test "model metadata inventory reports missing collision and inertial links" {
-  let inventory = model_metadata_inventory(
+  let inventory = @review.model_metadata_inventory(
     "model-source",
     ["base", "foot"],
     ["base"],
@@ -23,7 +23,7 @@ test "model metadata inventory reports missing collision and inertial links" {
 
 ///|
 test "model metadata inventory is ready when required metadata is present" {
-  let inventory = model_metadata_inventory(
+  let inventory = @review.model_metadata_inventory(
     "model-source",
     ["base", "foot"],
     ["base", "foot"],
@@ -37,7 +37,7 @@ test "model metadata inventory is ready when required metadata is present" {
 
 ///|
 test "physical model readiness blocks assumed and missing items" {
-  let readiness = physical_model_readiness(
+  let readiness = @review.physical_model_readiness(
     "physical-model",
     ["mass", "collision-shapes", "joint-damping"],
     ["collision-shapes"],
@@ -59,7 +59,7 @@ test "physical model readiness blocks assumed and missing items" {
 
 ///|
 test "physical model readiness passes authoritative items" {
-  let readiness = physical_model_readiness(
+  let readiness = @review.physical_model_readiness(
     "physical-model",
     ["mass", "collision-shapes"],
     ["mass", "collision-shapes"],
